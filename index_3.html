@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Silla Green · Powering Africa's electric future</title>
+<meta name="description" content="Silla Green builds the electric vehicles, charging infrastructure and renewable generation that move Africa. EV buses, ICE-to-EV retrofitting and Skywell distribution, powered by Huawei Digital Power.">
+<meta property="og:title" content="Silla Green · Powering Africa's electric future">
+<meta property="og:description" content="We turn electrons into economic throughput. EV mobility, charging infrastructure and renewable generation across the African corridor.">
+<meta property="og:image" content="https://REPLACE-WITH-DOMAIN.com/og.png">
+<meta name="theme-color" content="#D9D6C5">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta name="version" content="2.0">
+<link rel="canonical" href="https://REPLACE-WITH-DOMAIN.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://REPLACE-WITH-DOMAIN.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Silla Green · Powering Africa's electric future">
+<meta name="twitter:description" content="We turn electrons into economic throughput. EV mobility, charging infrastructure and renewable generation across the African corridor.">
+<meta name="twitter:image" content="https://REPLACE-WITH-DOMAIN.com/og.png">
+<style>
+/* ============================================================
+   SILLA GREEN · website V2
+   brand system
+   Colours and type sampled directly from Ronney Stengert's
+   2026 proposal deck so web and print carry one CI.
+     sand   #D9D6C5   mint  #94DAC9
+     char   #505151   deep  #629084
+   Typeface: Raleway only, per brand direction.
+   ============================================================ */
+@font-face{font-family:'Raleway';font-weight:200;font-style:normal;font-display:swap;src:url('assets/fonts/raleway-200.woff2') format('woff2')}
+@font-face{font-family:'Raleway';font-weight:300;font-style:normal;font-display:swap;src:url('assets/fonts/raleway-300.woff2') format('woff2')}
+@font-face{font-family:'Raleway';font-weight:400;font-style:normal;font-display:swap;src:url('assets/fonts/raleway-400.woff2') format('woff2')}
+@font-face{font-family:'Raleway';font-weight:500;font-style:normal;font-display:swap;src:url('assets/fonts/raleway-500.woff2') format('woff2')}
+@font-face{font-family:'Raleway';font-weight:700;font-style:normal;font-display:swap;src:url('assets/fonts/raleway-700.woff2') format('woff2')}
+@font-face{font-family:'Raleway';font-weight:800;font-style:normal;font-display:swap;src:url('assets/fonts/raleway-800.woff2') format('woff2')}
+
+:root{
+  --sand:#D9D6C5; --sand-lt:#E7E4D8; --sand-dk:#C6C2AF;
+  --mint:#94DAC9; --mint-lt:#B4E6DA; --mint-dp:#629084; --mint-md:#6E9C91;
+  --char:#505151; --ink:#2E2F2F; --white:#fff;
+  --obs:#121917; --obs2:#1B2422;
+  --f:'Raleway',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--sand);color:var(--char);font-family:var(--f);font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--mint);color:var(--ink)}
+
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+section{padding:104px 0;position:relative}
+h1,h2,h3,h4{font-weight:800;color:var(--ink);letter-spacing:-.005em;line-height:1.05;text-transform:uppercase}
+h2{font-size:clamp(32px,4.6vw,58px)}
+h3{font-size:clamp(20px,2.2vw,26px);letter-spacing:.01em}
+.sub{font-weight:300;font-size:clamp(17px,1.5vw,20px);color:var(--char);text-transform:none;letter-spacing:0;margin-top:6px}
+p{font-size:16.5px;max-width:74ch}
+p+p{margin-top:16px}
+.eyebrow{font-weight:700;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--mint-dp);margin-bottom:16px;display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--mint-dp)}
+.lead{font-size:clamp(17px,1.8vw,21px);font-weight:300;line-height:1.75;max-width:66ch}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:80;padding:18px 0;transition:.35s;background:transparent}
+nav.stuck{background:rgba(217,214,197,.94);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(80,81,81,.14);padding:12px 0}
+nav .bar{display:flex;align-items:center;gap:36px;max-width:1240px;margin:0 auto;padding:0 32px}
+nav .lg{height:26px;width:auto;filter:brightness(0) invert(1);transition:.35s}
+nav.stuck .lg{filter:none}
+nav .links{margin-left:auto;display:flex;gap:28px;align-items:center}
+nav .links a{font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;transition:.25s}
+nav.stuck .links a{color:var(--char)}
+nav .links a:hover{color:var(--mint)}
+nav.stuck .links a:hover{color:var(--mint-dp)}
+@media(max-width:900px){nav .links{display:none}}
+
+.btn{display:inline-flex;align-items:center;gap:11px;font-weight:700;font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;padding:16px 30px;background:var(--mint);color:var(--ink);
+  transition:.3s cubic-bezier(.2,.8,.2,1);border:2px solid var(--mint);cursor:pointer}
+.btn::after{content:"→";transition:transform .3s}
+.btn:hover{background:var(--mint-dp);border-color:var(--mint-dp);color:#fff;transform:translateY(-2px)}
+.btn:hover::after{transform:translateX(5px)}
+.btn.out{background:transparent;border-color:#fff;color:#fff}
+.btn.out:hover{background:#fff;color:var(--ink);border-color:#fff}
+.btn.dk{background:transparent;border-color:var(--char);color:var(--char)}
+.btn.dk:hover{background:var(--char);color:#fff}
+
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:flex-end;padding:0 0 78px;position:relative;overflow:hidden}
+.hero .bed{position:absolute;inset:0;z-index:0}
+.hero .bed img,.hero .bed video{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.06)}
+.hero .duo{position:absolute;inset:0;background:var(--mint-dp);mix-blend-mode:multiply;opacity:.82}
+.hero .tint{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,25,23,.42) 0%,rgba(98,144,132,.12) 42%,rgba(18,25,23,.62) 100%)}
+.hero .wrap{position:relative;z-index:2}
+.hero .mark{width:min(660px,78vw);margin-bottom:26px}
+.hero h1{color:#fff;font-weight:200;font-size:clamp(30px,5vw,62px);text-transform:none;letter-spacing:-.01em;line-height:1.05}
+.hero .hsub{color:rgba(255,255,255,.92);font-weight:300;font-size:clamp(15.5px,1.6vw,19px);max-width:62ch;margin-top:22px;line-height:1.75}
+.hero .cta{margin-top:38px;display:flex;gap:14px;flex-wrap:wrap}
+.scrollcue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:3;width:1px;height:52px;background:rgba(255,255,255,.42);overflow:hidden}
+.scrollcue::after{content:"";position:absolute;inset:0;background:#fff;animation:cue 2.4s cubic-bezier(.7,0,.3,1) infinite}
+@keyframes cue{0%{transform:translateY(-100%)}60%,100%{transform:translateY(100%)}}
+
+/* thesis */
+.thesis{background:var(--sand)}
+.big-quote{font-weight:200;font-size:clamp(30px,4.6vw,62px);color:var(--ink);line-height:1.08;letter-spacing:-.015em;max-width:19ch}
+.big-quote b{font-weight:800}
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+@media(max-width:960px){.split{grid-template-columns:1fr;gap:38px}}
+
+/* layer strip: bits / atoms / electrons */
+.layers{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:44px;background:var(--sand-dk)}
+.layer{background:var(--sand-lt);padding:30px 26px;transition:.3s;position:relative;overflow:hidden}
+.layer:hover{background:var(--mint)}
+.layer .n{font-weight:800;font-size:11px;letter-spacing:.2em;color:var(--mint-dp);transition:.3s}
+.layer:hover .n{color:var(--ink)}
+.layer h4{font-size:19px;margin:10px 0 8px;letter-spacing:0}
+.layer p{font-size:14.5px;line-height:1.65}
+@media(max-width:800px){.layers{grid-template-columns:1fr}}
+
+/* stat tiles, exactly the deck */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:52px}
+.stat{background:var(--mint);padding:42px 22px;text-align:center;transition:.3s}
+.stat:hover{background:var(--mint-dp)}
+.stat .v{font-weight:800;font-size:clamp(32px,3.6vw,46px);color:#fff;line-height:1}
+.stat .k{color:#fff;font-weight:300;font-size:14.5px;margin-top:8px;line-height:1.4}
+@media(max-width:860px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+/* product cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+.card{background:var(--sand-lt);transition:.35s}
+.card:hover{transform:translateY(-5px);box-shadow:0 26px 50px -30px rgba(46,47,47,.5)}
+.card .ph{aspect-ratio:4/3;overflow:hidden;background:var(--sand-dk)}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:.6s cubic-bezier(.2,.8,.2,1)}
+.card:hover .ph img{transform:scale(1.05)}
+.card .ct{background:var(--mint);padding:24px 24px 26px}
+.card h3{font-size:17px;letter-spacing:.04em;color:var(--ink)}
+.card p{font-size:14.5px;color:var(--ink);opacity:.86;margin-top:9px}
+@media(max-width:900px){.cards{grid-template-columns:1fr}}
+
+/* spec board */
+.specs{background:var(--mint);padding:76px 0}
+.specboard{display:grid;grid-template-columns:1fr 2px 1fr;gap:38px;align-items:start}
+.specgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.spec{background:var(--sand);padding:22px 20px}
+.spec h4{font-size:13px;letter-spacing:.06em;line-height:1.3}
+.spec p{font-size:14px;margin-top:8px;color:var(--char)}
+.specrule{background:var(--sand);width:2px;height:100%;min-height:220px;justify-self:center}
+.specveh{margin-top:26px}
+.specveh img{width:100%;max-width:420px;margin:0 auto;filter:grayscale(1) brightness(.92) contrast(1.05);mix-blend-mode:multiply}
+.spectitle{font-weight:800;font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);margin-bottom:20px}
+@media(max-width:960px){.specboard{grid-template-columns:1fr}.specrule{display:none}}
+
+/* dark electron layer */
+.electron{background:var(--obs);color:rgba(255,255,255,.72);padding:120px 0;position:relative;overflow:hidden}
+.electron canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.electron .wrap{position:relative;z-index:2}
+.electron h2{color:#fff}
+.electron .eyebrow{color:var(--mint)}
+.electron .eyebrow::before{background:var(--mint)}
+.electron .lead{color:rgba(255,255,255,.76)}
+.corridor{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:56px;background:rgba(148,218,201,.2);border:1px solid rgba(148,218,201,.2)}
+.node{background:rgba(18,25,23,.86);padding:26px 22px;transition:.3s}
+.node:hover{background:rgba(148,218,201,.10)}
+.node .st{font-weight:700;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mint);display:flex;align-items:center;gap:8px}
+.node .st i{width:7px;height:7px;border-radius:50%;background:var(--mint);font-style:normal;box-shadow:0 0 9px var(--mint);animation:blink 2.2s infinite}
+.node.q .st{color:var(--sand-dk)}
+.node.q .st i{background:var(--sand-dk);box-shadow:none;animation:none}
+@keyframes blink{50%{opacity:.25}}
+.node h4{color:#fff;font-size:19px;margin:14px 0 8px;letter-spacing:0}
+.node p{font-size:14px;color:rgba(255,255,255,.6)}
+@media(max-width:900px){.corridor{grid-template-columns:1fr 1fr}}
+
+/* footage strip */
+.strip{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:58px}
+.frame{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--obs2)}
+.frame img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.08) brightness(.82);transition:.6s}
+.frame:hover img{filter:none;transform:scale(1.03)}
+.frame .cap{position:absolute;left:0;right:0;bottom:0;padding:16px 18px;background:linear-gradient(transparent,rgba(18,25,23,.9));
+  font-weight:700;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#fff}
+.frame .rec{position:absolute;top:14px;left:16px;font-weight:700;font-size:9.5px;letter-spacing:.16em;color:var(--mint);display:flex;gap:7px;align-items:center}
+.frame .rec i{width:6px;height:6px;border-radius:50%;background:var(--mint);font-style:normal;animation:blink 1.8s infinite}
+@media(max-width:820px){.strip{grid-template-columns:1fr}}
+
+/* pillars */
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:52px}
+.pillar{background:var(--sand-lt);padding:32px 26px;border-top:4px solid var(--mint);transition:.3s}
+.pillar:hover{background:var(--mint);border-top-color:var(--mint-dp)}
+.pillar .n{font-weight:800;font-size:30px;color:var(--mint-dp);line-height:1;transition:.3s}
+.pillar:hover .n{color:var(--ink)}
+.pillar h4{font-size:14px;letter-spacing:.06em;margin:12px 0 10px;line-height:1.35}
+.pillar p{font-size:14px}
+@media(max-width:1000px){.pillars{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.pillars{grid-template-columns:1fr}}
+
+/* partners */
+.partners{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+.partner{background:var(--sand-lt);padding:34px 28px;transition:.3s;border-left:3px solid transparent}
+.partner:hover{border-left-color:var(--mint);background:#fff}
+.partner .pn{font-weight:800;font-size:16px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink)}
+.partner .pr{font-weight:700;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--mint-dp);margin-top:6px}
+.partner p{font-size:14.5px;margin-top:13px}
+@media(max-width:900px){.partners{grid-template-columns:1fr}}
+
+/* roadmap */
+.road{position:relative;padding:120px 0;overflow:hidden}
+.road .bed{position:absolute;inset:0;z-index:0}
+.road .bed img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.1)}
+.road .veil{position:absolute;inset:0;background:rgba(80,81,81,.62)}
+.road .wrap{position:relative;z-index:2}
+.road h2{color:#fff}
+.road .eyebrow{color:var(--mint)}
+.road .eyebrow::before{background:var(--mint)}
+.phases{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:52px}
+.phase{background:rgba(148,218,201,.9);padding:30px 24px;transition:.3s}
+.phase:hover{background:var(--mint);transform:translateY(-5px)}
+.phase .pn{font-weight:800;font-size:26px;color:var(--white);line-height:1}
+.phase .py{font-weight:700;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);margin-top:4px}
+.phase ul{list-style:none;margin-top:18px}
+.phase li{font-size:14px;color:var(--ink);padding-left:15px;position:relative;margin-top:10px;line-height:1.5}
+.phase li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;background:var(--ink)}
+@media(max-width:1000px){.phases{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.phases{grid-template-columns:1fr}}
+
+/* leadership */
+.team{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:52px}
+.member{background:var(--sand-lt);padding:26px 20px;border-bottom:4px solid var(--mint);transition:.3s}
+.member:hover{background:#fff;transform:translateY(-4px)}
+.member .mn{font-weight:800;font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink);line-height:1.3}
+.member .mr{font-weight:400;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mint-dp);margin-top:7px;line-height:1.5}
+.member p{font-size:13.5px;margin-top:14px;line-height:1.6}
+@media(max-width:1100px){.team{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.team{grid-template-columns:1fr}}
+
+/* contact */
+.contact{background:var(--mint);padding:104px 0}
+.contact h2{color:var(--ink)}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:48px}
+.cbox{background:var(--sand);padding:32px 28px}
+.cbox .cl{font-weight:700;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--mint-dp)}
+.cbox .cv{font-weight:400;font-size:17px;color:var(--ink);margin-top:10px;line-height:1.6;word-break:break-word}
+@media(max-width:820px){.cgrid{grid-template-columns:1fr}}
+
+footer{background:var(--obs);color:rgba(255,255,255,.42);padding:52px 0;font-size:12.5px;letter-spacing:.04em}
+footer .fl{display:flex;gap:22px;flex-wrap:wrap;align-items:center}
+footer img{height:22px;filter:brightness(0) invert(1);opacity:.75}
+footer .fr{margin-left:auto;display:flex;gap:22px}
+footer a:hover{color:var(--mint)}
+@media(max-width:760px){footer .fr{margin-left:0}}
+
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}*{animation:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="bar">
+    <a href="#top"><img class="lg" src="assets/logo-white.png" alt="Silla Green"></a>
+    <div class="links">
+      <a href="#mobility">Mobility</a>
+      <a href="#energy">Energy</a>
+      <a href="#network">Network</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#partners">Partners</a>
+      <a href="#contact">Engage</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="bed">
+    <!-- FOOTAGE SLOT 01 · replace <img> with <video autoplay muted loop playsinline poster="..."> when the depot reel lands -->
+    <img src="assets/img/hero-logistics.jpg" alt="Electric logistics corridor">
+  </div>
+  <div class="duo"></div>
+  <div class="tint"></div>
+  <div class="wrap">
+    <img class="mark rv in" src="assets/logo-white.png" alt="Silla Green">
+    <h1 class="rv" style="--d:.1s">Powering Africa's electric future</h1>
+    <p class="hsub rv" style="--d:.18s">Focusing on the integration of sustainable mobility solutions, through the deployment of advanced electric vehicles, ranging from mass transit buses to ultra-luxury state cars.</p>
+    <div class="cta rv" style="--d:.26s">
+      <a href="#contact" class="btn">Start a project</a>
+      <a href="#mobility" class="btn out">See the build</a>
+    </div>
+  </div>
+  <div class="scrollcue"></div>
+</header>
+
+<!-- ============ THESIS ============ -->
+<section class="thesis" id="thesis">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <div class="eyebrow rv">Towards a greener future</div>
+        <div class="big-quote rv" style="--d:.06s">We turn electrons into <b>economic throughput.</b></div>
+      </div>
+      <div>
+        <p class="lead rv" style="--d:.12s">The transition to electric mobility is a pivotal step toward environmental sustainability and energy independence. Silla Green envisions a transport network powered by clean, renewable energy, cutting carbon emissions and reliance on imported fossil fuels.</p>
+        <p class="rv" style="--d:.16s">Our tiered approach ensures that every sector of society benefits from the efficiency and the prestige of modern electric vehicle technology. We do not sell vehicles. We build the layer that makes a corridor economically viable, then we operate it.</p>
+      </div>
+    </div>
+
+    <div class="layers">
+      <div class="layer rv"><div class="n">LAYER 01</div><h4>Atoms</h4><p>The physical build. Buses, retrofitted fleets, depots, industrial parks and the 125-hectare footprint that anchors the network.</p></div>
+      <div class="layer rv" style="--d:.06s"><div class="n">LAYER 02</div><h4>Electrons</h4><p>Generation, storage and distribution. Solar farms and high-speed DC charging that make the atoms move without a diesel invoice.</p></div>
+      <div class="layer rv" style="--d:.12s"><div class="n">LAYER 03</div><h4>Bits</h4><p>The intelligence layer. AI fleet routing, load management and grid telemetry, so every corridor is measured, optimised and bankable.</p></div>
+    </div>
+
+    <div class="stats">
+      <div class="stat rv"><div class="v" data-n="1" data-pre="$" data-suf="B+">$0</div><div class="k">Valuation<br>target</div></div>
+      <div class="stat rv" style="--d:.06s"><div class="v" data-n="125" data-suf=" ha">0</div><div class="k">Industrial<br>footprint</div></div>
+      <div class="stat rv" style="--d:.12s"><div class="v" data-n="4" data-suf="+">0</div><div class="k">African<br>nations</div></div>
+      <div class="stat rv" style="--d:.18s"><div class="v" data-n="100" data-suf="%">0</div><div class="k">Solar<br>powered</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MOBILITY ============ -->
+<section id="mobility">
+  <div class="wrap">
+    <div class="eyebrow rv">Products and services</div>
+    <h2 class="rv" style="--d:.05s">EV Mobility</h2>
+    <p class="lead rv" style="--d:.1s" style="margin-top:18px">First mover in the African EV bus market, with an ecosystem that runs from retrofitting and distribution through to solar-powered industrial parks and a continent-spanning logistics network.</p>
+
+    <div class="cards">
+      <div class="card rv">
+        <div class="ph"><img src="assets/img/bus-city.jpg" alt="Silla Green electric bus in service" loading="lazy"></div>
+        <div class="ct"><h3>EV Bus Fleet</h3><p>First-mover electric buses across South Africa, Botswana, Uganda and beyond. Reliable, zero-emission mass transit for urban and regional corridors.</p></div>
+      </div>
+      <div class="card rv" style="--d:.07s">
+        <div class="ph"><img src="assets/img/retrofit.jpg" alt="ICE to EV conversion centre" loading="lazy"></div>
+        <div class="ct"><h3>ICE to EV Retrofitting</h3><p>State-of-the-art conversion centre in Tontonyane, Mahikeng. Breathing new electric life into existing diesel fleets through advanced engineering and battery integration.</p></div>
+      </div>
+      <div class="card rv" style="--d:.14s">
+        <div class="ph"><img src="assets/img/suv-lux.jpg" alt="Skywell B11 SUV" loading="lazy"></div>
+        <div class="ct"><h3>Skywell B11 SUV</h3><p>Flagship premium EV SUV distribution hub servicing Southern Africa. High-performance luxury electric vehicles with advanced smart features.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPECS ============ -->
+<section class="specs">
+  <div class="wrap">
+    <div class="specboard">
+      <div class="rv">
+        <div class="spectitle">EV Bus · mass transit</div>
+        <div class="specgrid">
+          <div class="spec"><h4>Passenger capacity</h4><p>Flexible configurations from 44 to 65 seats.</p></div>
+          <div class="spec"><h4>Battery technology</h4><p>High-safety LFP batteries supplied by CATL.</p></div>
+          <div class="spec"><h4>Operational range</h4><p>Up to 400km on a single charge for inter-city connectivity.</p></div>
+          <div class="spec"><h4>Chassis and suspension</h4><p>Low-entry design with advanced air suspension for maximum support.</p></div>
+        </div>
+        <div class="specveh"><img src="assets/img/bus-product.jpg" alt="EV bus" loading="lazy"></div>
+      </div>
+      <div class="specrule"></div>
+      <div class="rv" style="--d:.08s">
+        <div class="spectitle">Skywell B11 · premium SUV</div>
+        <div class="specgrid">
+          <div class="spec"><h4>Power output</h4><p>150kW electric motor for silent and smooth acceleration.</p></div>
+          <div class="spec"><h4>Safety suite</h4><p>Advanced Driver Assistance System with adaptive cruise control.</p></div>
+          <div class="spec"><h4>Operational range</h4><p>325km to 400km depending on battery configuration.</p></div>
+          <div class="spec"><h4>Interior luxury</h4><p>Alcantara and leather-style upholstery with a panoramic sunroof.</p></div>
+        </div>
+        <div class="specveh"><img src="assets/img/suv-product.jpg" alt="Skywell B11" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ENERGY / NETWORK ============ -->
+<section id="energy">
+  <div class="wrap">
+    <div class="eyebrow rv">Integrated charging network</div>
+    <h2 class="rv" style="--d:.05s">The energy backbone</h2>
+    <p class="lead rv" style="--d:.1s;margin-top:18px">A reliable transport network requires a robust energy backbone. In partnership with Huawei and One Stop Energy, Silla Green deploys the charging infrastructure that keeps the electric fleet in continuous operation.</p>
+
+    <div class="cards">
+      <div class="card rv">
+        <div class="ph"><img src="assets/img/smart-hub.jpg" alt="High-speed charging depot" loading="lazy"></div>
+        <div class="ct"><h3>Smart Hubs</h3><p>High-speed DC charging stations located at strategic transport nodes.</p></div>
+      </div>
+      <div class="card rv" style="--d:.07s">
+        <div class="ph"><img src="assets/img/solar.jpg" alt="Solar generation farm" loading="lazy"></div>
+        <div class="ct"><h3>Solar Farms</h3><p>Renewable energy generation to ensure a 100% green power supply.</p></div>
+      </div>
+      <div class="card rv" style="--d:.14s">
+        <div class="ph"><img src="assets/img/grid.jpg" alt="Grid operations centre" loading="lazy"></div>
+        <div class="ct"><h3>Grid Stability</h3><p>Intelligent monitoring systems to manage energy load and distribution.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ELECTRON LAYER (dark) ============ -->
+<section class="electron" id="network">
+  <canvas id="grid"></canvas>
+  <div class="wrap">
+    <div class="eyebrow rv">The corridor</div>
+    <h2 class="rv" style="--d:.05s">Real steel.<br>Measured in electrons.</h2>
+    <p class="lead rv" style="--d:.1s;margin-top:20px">Every depot, every charger and every kilometre reports back. The corridor is not a map on a slide. It is a live system with a load profile, a utilisation curve and an operating margin, which is what makes it financeable.</p>
+
+    <div class="corridor">
+      <div class="node rv"><div class="st"><i></i>Active</div><h4>South Africa</h4><p>Retrofitting centre, Tontonyane. Industrial park core. Skywell distribution hub.</p></div>
+      <div class="node rv" style="--d:.06s"><div class="st"><i></i>Active</div><h4>Botswana</h4><p>Transnational manufacturing and assembly with eMobility Botswana across the SADC region.</p></div>
+      <div class="node q rv" style="--d:.12s"><div class="st"><i></i>2026</div><h4>Uganda</h4><p>East Africa corridor establishment and charging network rollout.</p></div>
+      <div class="node q rv" style="--d:.18s"><div class="st"><i></i>2027</div><h4>Nigeria · Kenya · Tanzania</h4><p>West and East Africa expansion hubs. 1,000+ EV buses in operation.</p></div>
+    </div>
+
+    <div class="strip">
+      <div class="frame rv"><span class="rec"><i></i>Field</span><img src="assets/img/smart-hub.jpg" alt="Charging depot" loading="lazy"><span class="cap">Depot · high-speed DC</span></div>
+      <div class="frame rv" style="--d:.07s"><span class="rec"><i></i>Field</span><img src="assets/img/solar.jpg" alt="Solar generation farm" loading="lazy"><span class="cap">Generation · 100% solar</span></div>
+      <div class="frame rv" style="--d:.14s"><span class="rec"><i></i>Field</span><img src="assets/img/retrofit.jpg" alt="Conversion floor" loading="lazy"><span class="cap">Conversion floor · Mahikeng</span></div>
+    </div>
+    <!-- FOOTAGE SLOTS 02-04 · swap each .frame <img> for <video muted loop playsinline> once site reels are shot -->
+  </div>
+</section>
+
+<!-- ============ MARKET POSITION ============ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow rv">Market position</div>
+    <h2 class="rv" style="--d:.05s">Why this holds</h2>
+    <div class="pillars">
+      <div class="pillar rv"><div class="n">01</div><h4>First-mover dominance</h4><p>Secure government partnerships, key routes, and brand loyalty.</p></div>
+      <div class="pillar rv" style="--d:.06s"><div class="n">02</div><h4>Vertical integration</h4><p>Controlling the full EV value chain, from manufacturing and retrofitting to distribution, charging and long-term servicing.</p></div>
+      <div class="pillar rv" style="--d:.12s"><div class="n">03</div><h4>Transitional expansion</h4><p>Systematically replicating a proven model from South Africa and Botswana into East, Central and West Africa corridors.</p></div>
+      <div class="pillar rv" style="--d:.18s"><div class="n">04</div><h4>Strategic alliances</h4><p>Deep alliances with government bodies and infrastructure partners to create an unassailable competitive moat.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARTNERS ============ -->
+<section id="partners" style="background:var(--sand-lt)">
+  <div class="wrap">
+    <div class="eyebrow rv">Strategic partnerships</div>
+    <h2 class="rv" style="--d:.05s">Who we build with</h2>
+    <div class="partners">
+      <div class="partner rv"><div class="pn">Huawei</div><div class="pr">Charging technology</div><p>Official distributor of advanced EV charging technology and megawatt solutions for the African corridor.</p></div>
+      <div class="partner rv" style="--d:.05s"><div class="pn">eMobility Botswana</div><div class="pr">Manufacturing and assembly</div><p>Transnational manufacturing and assembly hub partner for EV buses and SUVs in the SADC region.</p></div>
+      <div class="partner rv" style="--d:.1s"><div class="pn">Skywell</div><div class="pr">Premium EV distribution</div><p>Strategic partner for premium EV-SUV distribution and regional warehouse servicing.</p></div>
+      <div class="partner rv" style="--d:.15s"><div class="pn">One Stop Energy</div><div class="pr">Renewable generation</div><p>Renewable energy partner providing 100% green, cost-effective power for charging infrastructure.</p></div>
+      <div class="partner rv" style="--d:.2s"><div class="pn">Silla Global</div><div class="pr">AI and logistics</div><p>AI logistics partner enabling digital transformation and systems integration for the green corridors.</p></div>
+      <div class="partner rv" style="--d:.25s"><div class="pn">Strategic Investor</div><div class="pr">Investor and offtaker</div><p>Strategic investor and offtaker providing access to sustainable energy solutions.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROADMAP ============ -->
+<section class="road" id="roadmap">
+  <div class="bed"><img src="assets/img/road.jpg" alt="Corridor"></div>
+  <div class="veil"></div>
+  <div class="wrap">
+    <div class="eyebrow rv">Expansion roadmap</div>
+    <h2 class="rv" style="--d:.05s">Four phases to the powerhouse</h2>
+    <div class="phases">
+      <div class="phase rv"><div class="pn">01</div><div class="py">Phase · Now</div><ul><li>South Africa and Botswana active</li><li>125 hectare industrial park core</li><li>ICE-to-EV retrofitting centre</li><li>Skywell SUV fleet rollout</li></ul></div>
+      <div class="phase rv" style="--d:.06s"><div class="pn">02</div><div class="py">Phase · 2026</div><ul><li>Uganda operations active</li><li>East Africa corridor established</li><li>EV charging network rollout</li><li>Strategic depot expansion</li></ul></div>
+      <div class="phase rv" style="--d:.12s"><div class="pn">03</div><div class="py">Phase · 2027</div><ul><li>Nigeria, Kenya, Tanzania entry</li><li>West Africa expansion hub</li><li>1,000+ EV buses in operation</li><li>AI fleet system integration</li></ul></div>
+      <div class="phase rv" style="--d:.18s"><div class="pn">04</div><div class="py">Phase · 2028+</div><ul><li>Coverage across 25+ nations</li><li>Africa's top EV powerhouse</li><li>Public listing target</li><li>Full vertical value chain control</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LEADERSHIP ============ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow rv">Leadership excellence</div>
+    <h2 class="rv" style="--d:.05s">Who runs it</h2>
+    <div class="team">
+      <div class="member rv"><div class="mn">HRH Ambassador<br>Dr Khumoetsile Moetse</div><div class="mr">Chairperson</div><p>Transformational leader, global humanitarian and diplomat. Two decades building high-impact industries and corporate reputations. Guiding Silla Green's global vision and market access on the continent.</p></div>
+      <div class="member rv" style="--d:.05s"><div class="mn">Nomfundo<br>Tshabalala</div><div class="mr">Chief Executive Officer</div><p>Over 18 years across global category management and strategic sourcing. Adept at aligning board-level strategy with granular operational excellence to drive sustainable profitability.</p></div>
+      <div class="member rv" style="--d:.1s"><div class="mn">Joshua<br>Silvanus</div><div class="mr">Lead Executive · Corporate Affairs</div><p>15+ years in corporate governance and administrative operations, specialising in organisational strategy and the execution of large-scale continental initiatives.</p></div>
+      <div class="member rv" style="--d:.15s"><div class="mn">Jean Janse<br>van Rensburg</div><div class="mr">Chief Innovation Officer</div><p>Frontier technology expert, AI systems architect and EV technology systems lead innovator.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="eyebrow rv" style="color:var(--mint-dp)">Engage</div>
+    <h2 class="rv" style="--d:.05s">Build the corridor with us</h2>
+    <p class="lead rv" style="--d:.1s;margin-top:18px;color:var(--ink)">Government fleets, transport operators, industrial parks and infrastructure capital. If you are moving people or freight across Africa, there is a version of this that works for you.</p>
+    <div class="cgrid">
+      <div class="cbox rv"><div class="cl">Web</div><div class="cv">www.sillagreen.com</div></div>
+      <div class="cbox rv" style="--d:.06s"><div class="cl">Telephone</div><div class="cv">081 310 2203<br>069 482 6031</div></div>
+      <div class="cbox rv" style="--d:.12s"><div class="cl">Email</div><div class="cv">info@sillaglobal.com</div></div>
+    </div>
+    <div style="margin-top:42px" class="rv"><a href="mailto:info@sillaglobal.com?subject=Silla%20Green%20project%20enquiry" class="btn dk">Start a project</a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap fl">
+    <img src="assets/logo-white.png" alt="Silla Green">
+    <span>A Silla Global company</span>
+    <div class="fr">
+      <span>© 2026 Silla Green (Pty) Ltd</span>
+      <a href="https://www.sillaglobal.com">sillaglobal.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* sticky nav */
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('stuck',scrollY>60),{passive:true});
+
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),
+  {threshold:.12,rootMargin:'0px 0px -60px 0px'});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+/* stat counters */
+const cio=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting) return; cio.unobserve(e.target);
+  const el=e.target, n=parseFloat(el.dataset.n), pre=el.dataset.pre||'', suf=el.dataset.suf||'';
+  const dur=1500, t0=performance.now(), dec=n%1!==0;
+  const tick=now=>{const p=Math.min((now-t0)/dur,1), v=n*(1-Math.pow(1-p,3));
+    el.textContent=pre+(dec?v.toFixed(1):Math.round(v))+suf;
+    if(p<1) requestAnimationFrame(tick);};
+  requestAnimationFrame(tick);
+}),{threshold:.5});
+document.querySelectorAll('.stat .v[data-n]').forEach(el=>cio.observe(el));
+
+/* ============================================================
+   ELECTRON LAYER
+   A corridor rendered as a grid: nodes are depots, the pulses
+   travelling the lines are load moving between them. Reads as
+   infrastructure telemetry rather than decoration.
+   ============================================================ */
+(()=>{
+  const c=document.getElementById('grid'); if(!c) return;
+  const x=c.getContext('2d');
+  const sec=c.parentElement;
+  const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  const MINT='148,218,201';
+  let W,H,DPR,cols,rows,nodes=[],links=[],pulses=[],t=0;
+
+  function build(){
+    DPR=Math.min(devicePixelRatio||1,2);
+    W=sec.offsetWidth; H=sec.offsetHeight;
+    c.width=W*DPR; c.height=H*DPR; x.setTransform(DPR,0,0,DPR,0,0);
+    const gap=W<820?110:140;
+    cols=Math.ceil(W/gap)+1; rows=Math.ceil(H/gap)+1;
+    nodes=[]; links=[];
+    for(let r=0;r<rows;r++) for(let i=0;i<cols;i++){
+      const jx=((r*7+i*13)%11-5)*3.2, jy=((r*5+i*17)%11-5)*3.2;
+      nodes.push({x:i*gap+jx, y:r*gap+jy, hub:((r*3+i*7)%13===0), flare:0});
+    }
+    nodes.forEach((n,i)=>{
+      const col=i%cols, row=Math.floor(i/cols);
+      if(col<cols-1) links.push([i,i+1]);
+      if(row<rows-1) links.push([i,i+cols]);
+    });
+    pulses=[];
+  }
+  build(); addEventListener('resize',build);
+
+  function fire(){
+    if(pulses.length>22||!links.length) return;
+    const l=links[Math.floor((t*613+pulses.length*37))%links.length];
+    pulses.push({l,p:0,s:.006+((t*29)%1)*.008});
+  }
+
+  function frame(){
+    x.clearRect(0,0,W,H);
+    if(!reduce) t+=.006;
+
+    x.lineWidth=1;
+    links.forEach(([a,b])=>{
+      const A=nodes[a],B=nodes[b]; if(!A||!B) return;
+      x.strokeStyle='rgba('+MINT+',0.085)';
+      x.beginPath(); x.moveTo(A.x,A.y); x.lineTo(B.x,B.y); x.stroke();
+    });
+
+    nodes.forEach(n=>{
+      if(n.flare>0){
+        x.fillStyle='rgba('+MINT+','+(n.flare*.30)+')';
+        x.beginPath(); x.arc(n.x,n.y,10*n.flare,0,6.2832); x.fill();
+        n.flare-=reduce?1:.02;
+      }
+      x.fillStyle='rgba('+MINT+','+(n.hub?0.42:0.16)+')';
+      x.beginPath(); x.arc(n.x,n.y,n.hub?2.4:1.3,0,6.2832); x.fill();
+    });
+
+    if(!reduce && Math.floor(t*1000)%9===0) fire();
+    for(let i=pulses.length-1;i>=0;i--){
+      const pu=pulses[i], A=nodes[pu.l[0]], B=nodes[pu.l[1]];
+      if(!A||!B){pulses.splice(i,1);continue}
+      if(!reduce) pu.p+=pu.s;
+      if(pu.p>=1){ B.flare=1; pulses.splice(i,1); continue }
+      const px=A.x+(B.x-A.x)*pu.p, py=A.y+(B.y-A.y)*pu.p;
+      const tp=Math.max(0,pu.p-.30);
+      x.strokeStyle='rgba('+MINT+',0.5)'; x.lineWidth=1.6;
+      x.beginPath();
+      x.moveTo(A.x+(B.x-A.x)*tp, A.y+(B.y-A.y)*tp); x.lineTo(px,py); x.stroke();
+      x.fillStyle='rgba(255,255,255,0.92)';
+      x.beginPath(); x.arc(px,py,1.9,0,6.2832); x.fill();
+      x.fillStyle='rgba('+MINT+',0.22)';
+      x.beginPath(); x.arc(px,py,6,0,6.2832); x.fill();
+    }
+    requestAnimationFrame(frame);
+  }
+  frame();
+})();
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization",
+"name":"Silla Green","legalName":"Silla Green (Pty) Ltd",
+"description":"Electric vehicles, charging infrastructure and renewable generation across the African corridor.",
+"slogan":"Powering Africa's electric future",
+"parentOrganization":{"@type":"Organization","name":"Silla Global"},
+"email":"info@sillaglobal.com","telephone":"+27813102203",
+"areaServed":["South Africa","Botswana","Uganda","Nigeria","Kenya","Tanzania"]}
+</script>
+</body>
+</html>
