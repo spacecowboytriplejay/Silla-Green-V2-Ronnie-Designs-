@@ -222,14 +222,31 @@ nav.stuck .links a:hover{color:var(--mint-dp)}
 @media(max-width:1000px){.phases{grid-template-columns:1fr 1fr}}
 @media(max-width:620px){.phases{grid-template-columns:1fr}}
 
+/* phase 2 */
+.p2{background:var(--sand-lt)}
+.p2 .shot{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+.p2 .wide{width:100%;aspect-ratio:16/7;object-fit:cover;display:block;margin-top:52px}
+.p2 .stats .stat{background:var(--mint-dp)}
+.p2 .layers{grid-template-columns:repeat(3,1fr)}
+.p2phases{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:22px}
+.p2phase{background:var(--white);padding:30px 26px;border-top:4px solid var(--mint)}
+.p2phase .pn{font-weight:800;font-size:22px;color:var(--mint-dp);line-height:1}
+.p2phase .py{font-weight:700;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);margin-top:6px}
+.p2phase ul{list-style:none;margin-top:14px}
+.p2phase li{font-size:14px;padding-left:15px;position:relative;margin-top:9px;line-height:1.5}
+.p2phase li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;background:var(--mint-dp)}
+.p2 .note{font-size:15px;margin-top:34px;max-width:70ch}
+@media(max-width:900px){.p2phases{grid-template-columns:1fr}}
+
 /* leadership */
-.team{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:52px}
+.team{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:52px}
 .member{background:var(--sand-lt);padding:26px 20px;border-bottom:4px solid var(--mint);transition:.3s}
 .member:hover{background:#fff;transform:translateY(-4px)}
 .member .mn{font-weight:800;font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink);line-height:1.3}
 .member .mr{font-weight:400;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mint-dp);margin-top:7px;line-height:1.5}
 .member p{font-size:13.5px;margin-top:14px;line-height:1.6}
-@media(max-width:1100px){.team{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:1200px){.team{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:900px){.team{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:720px){.team{grid-template-columns:1fr}}
 
 /* contact */
@@ -263,6 +280,7 @@ footer a:hover{color:var(--mint)}
       <a href="#energy">Energy</a>
       <a href="#network">Network</a>
       <a href="#roadmap">Roadmap</a>
+      <a href="#phase2">Phase 2</a>
       <a href="#partners">Partners</a>
       <a href="#contact">Engage</a>
     </div>
@@ -439,10 +457,10 @@ footer a:hover{color:var(--mint)}
     <div class="eyebrow rv">Strategic partnerships</div>
     <h2 class="rv" style="--d:.05s">Who we build with</h2>
     <div class="partners">
-      <div class="partner rv"><div class="pn">Huawei</div><div class="pr">Charging technology</div><p>Official distributor of advanced EV charging technology and megawatt solutions for the African corridor.</p></div>
+      <div class="partner rv"><div class="pn">Huawei</div><div class="pr">Consulting partner</div><p>Silla Green is a consulting partner of Huawei for EV charging technology and megawatt solutions on the African corridor.</p></div>
       <div class="partner rv" style="--d:.05s"><div class="pn">eMobility Botswana</div><div class="pr">Manufacturing and assembly</div><p>Transnational manufacturing and assembly hub partner for EV buses and SUVs in the SADC region.</p></div>
       <div class="partner rv" style="--d:.1s"><div class="pn">Skywell</div><div class="pr">Premium EV distribution</div><p>Strategic partner for premium EV-SUV distribution and regional warehouse servicing.</p></div>
-      <div class="partner rv" style="--d:.15s"><div class="pn">One Stop Energy</div><div class="pr">Renewable generation</div><p>Renewable energy partner providing 100% green, cost-effective power for charging infrastructure.</p></div>
+      <div class="partner rv" style="--d:.15s"><div class="pn">One Stop Energy</div><div class="pr">Implementing partner</div><p>Implementing partner of the Silla Global Group for charging infrastructure powered by renewable energy.</p></div>
       <div class="partner rv" style="--d:.2s"><div class="pn">Silla Global</div><div class="pr">AI and logistics</div><p>AI logistics partner enabling digital transformation and systems integration for the green corridors.</p></div>
       <div class="partner rv" style="--d:.25s"><div class="pn">Strategic Investor</div><div class="pr">Investor and offtaker</div><p>Strategic investor and offtaker providing access to sustainable energy solutions.</p></div>
     </div>
@@ -465,16 +483,59 @@ footer a:hover{color:var(--mint)}
   </div>
 </section>
 
+<!-- ============ PHASE 2 ============ -->
+<section class="p2" id="phase2">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <div class="eyebrow rv">Makhado Green Corridor · Phase 2</div>
+        <h2 class="rv" style="--d:.05s">A farm with layers</h2>
+        <p class="lead rv" style="--d:.1s;margin-top:18px">Phase one of the Makhado Green Corridor is an integrated electric mobility hub. Phase two is an agriculture and manufacturing hub for research, agro-processing and beneficiation.</p>
+        <p class="rv" style="--d:.14s;margin-top:16px">Its first project is the Silla Green Eco Farm: a 50-acre organic farm, eco-lodge and retreat centre in Makhado, Limpopo. Orchards, fungi, animals and guests each produce what the next layer needs. Nothing is wasted, and every layer earns.</p>
+      </div>
+      <div class="rv" style="--d:.1s"><img class="shot" src="assets/img/eco-farm.jpg" alt="Concept render of the Silla Green Eco Farm orchards and lodge at sunset" loading="lazy"></div>
+    </div>
+
+    <div class="stats">
+      <div class="stat rv"><div class="v">50</div><div class="k">Acres</div></div>
+      <div class="stat rv" style="--d:.06s"><div class="v">6</div><div class="k">Layers</div></div>
+      <div class="stat rv" style="--d:.12s"><div class="v">3 in 1</div><div class="k">Farm, lodge<br>and retreats</div></div>
+      <div class="stat rv" style="--d:.18s"><div class="v">0%</div><div class="k">Waste<br>by design</div></div>
+    </div>
+
+    <div class="layers">
+      <div class="layer rv"><div class="n">LAYER 01</div><h4>Canopy</h4><p>Marula, mango and indigenous shade trees.</p></div>
+      <div class="layer rv" style="--d:.04s"><div class="n">LAYER 02</div><h4>Orchards</h4><p>Macadamia and avocado for premium markets.</p></div>
+      <div class="layer rv" style="--d:.08s"><div class="n">LAYER 03</div><h4>Fungi</h4><p>Gourmet mushrooms grown on husk waste.</p></div>
+      <div class="layer rv" style="--d:.12s"><div class="n">LAYER 04</div><h4>Livestock</h4><p>Free-range poultry and goats.</p></div>
+      <div class="layer rv" style="--d:.16s"><div class="n">LAYER 05</div><h4>Pollinators</h4><p>Bees for honey and better orchard yields.</p></div>
+      <div class="layer rv" style="--d:.2s"><div class="n">LAYER 06</div><h4>Guests</h4><p>Eco-lodge and retreats on top of it all: detox, yoga, spiritual and corporate.</p></div>
+    </div>
+
+    <img class="wide rv" src="assets/img/eco-farm-site.jpg" alt="Concept render of the eco-lodge, dam and orchards on the farm site" loading="lazy">
+
+    <div class="p2phases">
+      <div class="p2phase rv"><div class="pn">01</div><div class="py">Foundation</div><ul><li>Water, solar and access</li><li>Nursery and first plantings</li><li>Kitchen garden</li><li>Staff and operations base</li></ul></div>
+      <div class="p2phase rv" style="--d:.06s"><div class="pn">02</div><div class="py">Quick revenue</div><ul><li>Poultry, goats, bees, mushrooms</li><li>First lodge suites and retreats</li><li>Farm box, website and app</li></ul></div>
+      <div class="p2phase rv" style="--d:.12s"><div class="pn">03</div><div class="py">Maturity</div><ul><li>Macadamia and avocado harvests</li><li>Own-label product range</li><li>Full lodge and corporate retreats</li><li>National online shop</li></ul></div>
+    </div>
+
+    <p class="note rv">Built in public: the farm is documented from day one, from the first trees to the first harvest and the first guests. A Kenya edition is in development.</p>
+    <div style="margin-top:30px" class="rv"><a href="mailto:info@sillaglobal.com?subject=Silla%20Green%20Phase%202%20partnership" class="btn dk">Partner on Phase 2</a></div>
+  </div>
+</section>
+
 <!-- ============ LEADERSHIP ============ -->
 <section>
   <div class="wrap">
     <div class="eyebrow rv">Leadership excellence</div>
     <h2 class="rv" style="--d:.05s">Who runs it</h2>
     <div class="team">
-      <div class="member rv"><div class="mn">HRH Ambassador<br>Dr Khumoetsile Moetse</div><div class="mr">Chairperson</div><p>Transformational leader, global humanitarian and diplomat. Two decades building high-impact industries and corporate reputations. Guiding Silla Green's global vision and market access on the continent.</p></div>
-      <div class="member rv" style="--d:.05s"><div class="mn">Nomfundo<br>Tshabalala</div><div class="mr">Chief Executive Officer</div><p>Over 18 years across global category management and strategic sourcing. Adept at aligning board-level strategy with granular operational excellence to drive sustainable profitability.</p></div>
-      <div class="member rv" style="--d:.1s"><div class="mn">Joshua<br>Silvanus</div><div class="mr">Lead Executive · Corporate Affairs</div><p>15+ years in corporate governance and administrative operations, specialising in organisational strategy and the execution of large-scale continental initiatives.</p></div>
+      <div class="member rv"><div class="mn">HRH Ambassador<br>Dr Khumoetsile Moetse</div><div class="mr">Executive Chairperson</div><p>Transformational leadership with diplomatic experience and public administration. 25 years building high-impact industries and corporate reputations. Guiding Silla Green's global vision and market access on the continent.</p></div>
+      <div class="member rv" style="--d:.05s"><div class="mn">Joshua<br>Silvanus</div><div class="mr">Lead Executive · Corporate Affairs</div><p>15+ years in corporate governance and administrative operations, specialising in organisational strategy and the execution of large-scale continental initiatives.</p></div>
+      <div class="member rv" style="--d:.1s"><div class="mn">Mahopotsa<br>Patricia Peete</div><div class="mr">Lead Executive · Manufacturing</div><p>Entrepreneur with 10+ years across agriculture, commodity trading and business development. Owner of JLMM Farm and director at Dicla Agric Machinery, driving Silla Green's manufacturing and strategic sourcing.</p></div>
       <div class="member rv" style="--d:.15s"><div class="mn">Jean Janse<br>van Rensburg</div><div class="mr">Chief Innovation Officer</div><p>Frontier technology expert, AI systems architect and EV technology systems lead innovator.</p></div>
+      <div class="member rv" style="--d:.2s"><div class="mn">Ronny<br>Stengert</div><div class="mr">Creative Director</div><p>A creative professional with 20+ years of experience, transforming ideas into compelling visual stories and experiences.</p></div>
     </div>
   </div>
 </section>
@@ -497,7 +558,7 @@ footer a:hover{color:var(--mint)}
 <footer>
   <div class="wrap fl">
     <img src="assets/logo-white.png" alt="Silla Green">
-    <span>A Silla Global company</span>
+    <span>A Silla Global Group company</span>
     <div class="fr">
       <span>© 2026 Silla Green (Pty) Ltd</span>
       <a href="https://www.sillaglobal.com">sillaglobal.com</a>
